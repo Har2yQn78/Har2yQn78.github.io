@@ -10,7 +10,8 @@ const content = {
   subtext:
     'Like Sisyphus, the work is never finished. Every system rebuilt, every model retrained, the climb starts again.',
   ctas: [
-    { label: 'CONTACT', href: '#contact', primary: true },
+    // Contact section not built yet; both point to About for now.
+    { label: 'CONTACT', href: '#about', primary: true },
     { label: 'ABOUT ME', href: '#about', primary: false },
   ],
 };
@@ -31,8 +32,12 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[100dvh] overflow-hidden bg-black font-mono text-white">
-      {/* Background: animated ASCII (desktop) / static starfield (mobile) */}
-      <div className="absolute inset-0 hidden lg:block" aria-hidden="true">
+      {/* Background: animated ASCII (desktop) / static starfield (mobile).
+          Masked so the field concentrates on the right, leaving the left copy clean. */}
+      <div
+        className="absolute inset-0 hidden lg:block [mask-image:linear-gradient(to_right,transparent,black_45%)]"
+        aria-hidden="true"
+      >
         <AsciiField className="h-full w-full" />
       </div>
       <div className="absolute inset-0 lg:hidden starfield" aria-hidden="true" />
