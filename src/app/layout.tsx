@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Personal portfolio",
+  title: "Harry Was Here",
+  description: "Harry Amiri (Hamidreza Amiri) — Technical Lead at Zimmer. Engineer working where systems meet design.",
 };
 
 export default function RootLayout({

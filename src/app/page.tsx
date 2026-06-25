@@ -1,5 +1,6 @@
 import { Hero } from '@/components/sections/Hero';
 import { About } from '@/components/sections/About';
+import { Writing } from '@/components/sections/Writing';
 import { Footer } from '@/components/sections/Footer';
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <main className="flex-1">
       <Hero />
       <About />
+      <Writing />
       {/* Next sections mount below. */}
       <Footer />
     </main>
