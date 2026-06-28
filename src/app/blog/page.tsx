@@ -4,7 +4,7 @@ import { getAllPostsMeta, formatDate } from '@/lib/blog';
 
 export const metadata: Metadata = {
   title: 'Writing — Harry Was Here',
-  description: 'Notes on systems, design, and building.',
+  description: 'How I think, build, and take things apart.',
 };
 
 export default function BlogIndex() {
@@ -22,7 +22,7 @@ export default function BlogIndex() {
 
         <header className="mt-10">
           <h1 className="font-mono text-4xl font-bold tracking-tight lg:text-5xl">Writing</h1>
-          <p className="mt-3 text-white/55">Notes on systems, design, and building.</p>
+          <p className="mt-3 text-white/55">How I think, build, and take things apart.</p>
         </header>
 
         {posts.length === 0 ? (
