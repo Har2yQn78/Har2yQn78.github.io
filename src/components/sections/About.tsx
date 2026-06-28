@@ -58,7 +58,7 @@ export function About() {
           variants={item}
           className="mt-3 text-xl text-white/55 lg:text-2xl"
         >
-          Building Zimmer.
+          Intelligent Systems Engineer
         </motion.p>
 
         <motion.p
@@ -68,11 +68,16 @@ export function About() {
           Hamidreza on the birth certificate. A <AgeCounter />
           -year-old engineer working where <span className="text-white">systems</span> meet{' '}
           <span className="text-white">design</span>. Right now I&apos;m Technical Lead at{' '}
-          <span className="text-white">Zimmer</span>, shipping software that has to hold up in the
-          real world. Off the clock it&apos;s games, both playing and building them, plus books and
-          music. What I care about: clean architecture, design systems that scale, and{' '}
+          <span className="text-white">Zimmer</span>. I use <span className="text-white">Linux</span>,
+          btw. Off the clock it&apos;s games, both playing and building them, plus books and music.
+          What I care about: clean architecture, systems that scale, and{' '}
           <span className="text-white">problems worth solving</span>.
         </motion.p>
+
+        <motion.div
+          variants={item}
+          className="mt-10 h-px w-full max-w-3xl bg-white/10"
+        />
 
         <motion.nav
           variants={item}

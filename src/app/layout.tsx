@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Loader } from "@/components/ui/Loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Harry Was Here",
-  description: "Harry Amiri (Hamidreza Amiri) — Technical Lead at Zimmer. Engineer working where systems meet design.",
+  description:
+    "Personal site of Harry Amiri (Hamidreza Amiri), Intelligent Systems Engineer. Backend, machine learning, and AI agents. Building Zimmer. Notes on systems, design, and building.",
 };
 
 export default function RootLayout({
@@ -27,7 +29,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Loader />
+        {children}
+      </body>
     </html>
   );
 }

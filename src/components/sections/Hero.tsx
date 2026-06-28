@@ -9,11 +9,7 @@ const content = {
   headline: ['ENDLESS', 'ASCENT'],
   subtext:
     'Like Sisyphus, the work is never finished. Every system rebuilt, every model retrained, the climb starts again.',
-  ctas: [
-    // Contact section not built yet; both point to About for now.
-    { label: 'CONTACT', href: '#about', primary: true },
-    { label: 'ABOUT ME', href: '#about', primary: false },
-  ],
+  ctas: [{ label: 'READ THE BLOG', href: '/blog', primary: true }],
 };
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -59,10 +55,6 @@ export function Hero() {
         <div className="mx-auto flex max-w-[1400px] items-center gap-4 px-6 py-4 lg:px-12">
           <span className="text-base font-bold tracking-widest text-white lg:text-lg">
             {content.wordmark}
-          </span>
-          <span className="hidden h-3 w-px bg-white/30 sm:block" />
-          <span className="hidden text-[10px] tracking-[0.22em] text-white/55 sm:block">
-            {content.role}
           </span>
         </div>
       </header>
