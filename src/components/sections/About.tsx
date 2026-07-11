@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useReducedMotion, type Variants } from 'motion/react';
-import { AsciiAscent } from '@/components/ui/AsciiAscent';
+import { NodeAscent } from '@/components/ui/NodeAscent';
 import { AgeCounter } from '@/components/ui/AgeCounter';
 
 const socials = [
@@ -51,7 +51,7 @@ export function About() {
     >
       {/* Looping ascending ASCII background */}
       <div className="absolute inset-0" aria-hidden="true">
-        <AsciiAscent className="h-full w-full" />
+        <NodeAscent className="h-full w-full" />
       </div>
       {/* Soft vignette to keep the centered copy crisp */}
       <div
