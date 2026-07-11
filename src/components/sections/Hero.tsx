@@ -44,11 +44,11 @@ export function Hero() {
         aria-hidden="true"
       />
 
-      {/* Corner frame accents */}
-      <div className="pointer-events-none absolute left-4 top-4 h-8 w-8 border-l-2 border-t-2 border-white/25 lg:h-12 lg:w-12" />
-      <div className="pointer-events-none absolute right-4 top-4 h-8 w-8 border-r-2 border-t-2 border-white/25 lg:h-12 lg:w-12" />
-      <div className="pointer-events-none absolute bottom-4 left-4 h-8 w-8 border-b-2 border-l-2 border-white/25 lg:h-12 lg:w-12" />
-      <div className="pointer-events-none absolute bottom-4 right-4 h-8 w-8 border-b-2 border-r-2 border-white/25 lg:h-12 lg:w-12" />
+      {/* Corner frame accents — ctOS reticle */}
+      <div className="pointer-events-none absolute left-4 top-4 h-8 w-8 border-l-2 border-t-2 border-ctos/45 lg:h-12 lg:w-12" />
+      <div className="pointer-events-none absolute right-4 top-4 h-8 w-8 border-r-2 border-t-2 border-ctos/45 lg:h-12 lg:w-12" />
+      <div className="pointer-events-none absolute bottom-4 left-4 h-8 w-8 border-b-2 border-l-2 border-ctos/45 lg:h-12 lg:w-12" />
+      <div className="pointer-events-none absolute bottom-4 right-4 h-8 w-8 border-b-2 border-r-2 border-ctos/45 lg:h-12 lg:w-12" />
 
       {/* Top bar: wordmark + role */}
       <header className="absolute inset-x-0 top-0 z-20 border-b border-white/10">
@@ -69,7 +69,7 @@ export function Hero() {
         <div className="max-w-2xl">
           <motion.p
             variants={item}
-            className="mb-4 text-[11px] tracking-[0.28em] text-white/55"
+            className="mb-4 text-[11px] tracking-[0.28em] text-ctos/80"
           >
             {content.role}
           </motion.p>

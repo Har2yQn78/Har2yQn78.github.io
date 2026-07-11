@@ -32,6 +32,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Loader />
         {children}
+        <div className="scanlines" aria-hidden="true" />
       </body>
     </html>
   );

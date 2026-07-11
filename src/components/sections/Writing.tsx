@@ -12,7 +12,7 @@ export function Writing() {
           <h2 className="font-mono text-3xl font-bold tracking-tight lg:text-4xl">Writing</h2>
           <Link
             href="/blog"
-            className="shrink-0 font-mono text-xs uppercase tracking-widest text-white/45 transition-colors hover:text-white"
+            className="shrink-0 font-mono text-xs uppercase tracking-widest text-white/45 transition-colors hover:text-ctos"
           >
             All posts →
           </Link>
@@ -25,7 +25,7 @@ export function Writing() {
                 href={`/blog/${p.slug}`}
                 className="group flex items-baseline justify-between gap-6 py-6"
               >
-                <span className="font-mono text-base text-white/80 transition-colors group-hover:text-white">
+                <span className="font-mono text-base text-white/80 transition-colors group-hover:text-ctos">
                   {p.title}
                 </span>
                 <time className="shrink-0 font-mono text-xs text-white/40">
