@@ -116,7 +116,7 @@ export function About() {
             <Field label="Age">
               <AgeCounter />
             </Field>
-            <Field label="Employer">
+            <Field label="Occupation">
               <a
                 href="https://zimmerai.com"
                 target="_blank"

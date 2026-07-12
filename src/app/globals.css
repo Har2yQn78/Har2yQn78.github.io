@@ -26,7 +26,7 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
 
-/* --- ctOS scanline overlay (site-wide, faint) --- */
+/* --- ctOS scanline overlay (site-wide, faint, static) --- */
 .scanlines {
   position: fixed;
   inset: 0;
@@ -39,34 +39,6 @@ body {
     transparent 1px,
     transparent 3px
   );
-}
-/* a single brighter line sweeping down — the ctOS scan */
-.scanlines::after {
-  content: '';
-  position: absolute;
-  inset-inline: 0;
-  top: 0;
-  height: 22vh;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(34, 211, 238, 0.05) 55%,
-    rgba(34, 211, 238, 0.09)
-  );
-  animation: ctos-scan 7s linear infinite;
-}
-@keyframes ctos-scan {
-  0% {
-    transform: translateY(-25vh);
-  }
-  100% {
-    transform: translateY(125vh);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .scanlines::after {
-    display: none; /* static lines remain; the sweep is motion, so drop it */
-  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
