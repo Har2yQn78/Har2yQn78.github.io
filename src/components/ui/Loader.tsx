@@ -12,6 +12,39 @@ import {
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
+// ctOS trace signature — decodes into place under the boot bar. Digits scramble,
+// colons hold the structure, reveal runs left-to-right. Static under reduced motion.
+const SIGNATURE = '21:12:1293:2001:02:0278:10';
+const GLYPHS = '0123456789';
+
+function GlitchSignature({ reduce }: { reduce: boolean | null }) {
+  const [text, setText] = useState(reduce ? SIGNATURE : SIGNATURE.replace(/\d/g, '0'));
+
+  useEffect(() => {
+    if (reduce) return;
+    let frame = 0;
+    const total = 44;
+    const id = setInterval(() => {
+      frame += 1;
+      const revealed = Math.floor((frame / total) * SIGNATURE.length);
+      setText(
+        SIGNATURE.split('')
+          .map((c, i) =>
+            i < revealed || c === ':' ? c : GLYPHS[Math.floor(Math.random() * GLYPHS.length)],
+          )
+          .join(''),
+      );
+      if (frame >= total) {
+        setText(SIGNATURE);
+        clearInterval(id);
+      }
+    }, 16);
+    return () => clearInterval(id);
+  }, [reduce]);
+
+  return <span className="tabular-nums">{text}</span>;
+}
+
 /**
  * First-launch boot screen. Counts 000->100, fills a hairline bar, then the
  * whole overlay slides up (the "ascent") to reveal the page. Shows once per
@@ -105,6 +138,10 @@ export function Loader() {
             </div>
 
             <p className="mt-4 text-[11px] tracking-[0.22em] text-white/40">ESTABLISHING ASCENT</p>
+            <p className="mt-2 text-[10px] tracking-[0.22em] text-white/25">
+              SIG <span className="text-white/15">//</span>{' '}
+              <GlitchSignature reduce={reduce} />
+            </p>
           </div>
         </motion.div>
       )}
