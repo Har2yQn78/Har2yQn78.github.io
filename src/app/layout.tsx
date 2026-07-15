@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Loader } from "@/components/ui/Loader";
+import { SITE_URL, SITE_NAME, SITE_DESC } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,9 +15,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Harry Was Here",
-  description:
-    "Personal site of Harry Amiri (Hamidreza Amiri), Intelligent Systems Engineer. Backend, machine learning, and AI agents. Building Zimmer. Notes on systems, design, and building.",
+  metadataBase: new URL(SITE_URL),
+  title: { default: SITE_NAME, template: `%s — ${SITE_NAME}` },
+  description: SITE_DESC,
+  manifest: "/site.webmanifest",
+  alternates: {
+    types: { "application/rss+xml": [{ url: "/feed.xml", title: SITE_NAME }] },
+  },
+  openGraph: {
+    type: "website",
+    siteName: SITE_NAME,
+    title: SITE_NAME,
+    description: SITE_DESC,
+    url: SITE_URL,
+    images: ["/og.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description: SITE_DESC,
+    creator: "@Harry_Qn",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({
