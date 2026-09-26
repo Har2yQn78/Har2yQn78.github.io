@@ -2,7 +2,7 @@
 title: "Who Trains the Next Senior"
 date: "2026-09-26"
 excerpt: "I got good at judging code partly because I spent years being slow and wrong at writing it. I'm not sure that path exists anymore, and I don't think that's a small problem."
-tags: ["essay", "engineering", "ai"]
+tags: ["coding", "engineering", "ai"]
 ---
 
 Most of my day used to be measured in lines written. Now it's measured in decisions made.
